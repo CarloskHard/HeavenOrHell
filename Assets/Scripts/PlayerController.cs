@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
-
     private Vector2 moveInput;
+    private bool isDead = false; // El "interruptor" de vida
+
     private float minX, maxX;
 
     void Start()
@@ -13,39 +14,63 @@ public class PlayerController : MonoBehaviour
         CalculateBoundaries();
     }
 
-    void CalculateBoundaries()
-    {
-        // 1. Obtenemos la cámara principal
-        Camera cam = Camera.main;
-
-        // 2. Calculamos el borde izquierdo (0) y derecho (1) en el mundo
-        // Usamos la posición Z del jugador respecto a la cámara para mayor precisión
-        float distance = transform.position.z - cam.transform.position.z;
-
-        Vector3 leftEdge = cam.ViewportToWorldPoint(new Vector3(0, 0, distance));
-        Vector3 rightEdge = cam.ViewportToWorldPoint(new Vector3(1, 0, distance));
-
-        // 3. Obtenemos el ancho del jugador
-        float playerHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
-
-        // 4. Guardamos los límites finales
-        minX = leftEdge.x + playerHalfWidth;
-        maxX = rightEdge.x - playerHalfWidth;
-    }
-
     public void OnMove(InputValue value)
     {
+        // Si estamos muertos, no guardamos el movimiento
+        if (isDead)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
         moveInput = value.Get<Vector2>();
     }
 
     void Update()
     {
-        // Movimiento normal
+        // Si estamos muertos, no hacemos nada en el Update
+        if (isDead) return;
+
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0) * speed * Time.deltaTime;
         transform.Translate(movement);
 
-        // APLICAR LÍMITES DINÁMICOS
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Si chocamos con un coche y aún no estamos muertos...
+        if (other.CompareTag("Car") && !isDead)
+        {
+            Die(other.gameObject);
+        }
+    }
+
+    void Die(GameObject carThatHitMe)
+    {
+        isDead = true;
+        moveInput = Vector2.zero; // Frenamos cualquier movimiento pendiente
+        Debug.Log("¡GAME OVER!");
+
+        // 1. Le decimos al coche que frene
+        Car carScript = carThatHitMe.GetComponent<Car>();
+        if (carScript != null)
+        {
+            carScript.speed = 0; // Frenazo instantáneo
+        }
+
+        // 2. Opcional: Cambiar color al jugador para que se note la muerte
+        GetComponent<SpriteRenderer>().color = Color.gray;
+    }
+
+    void CalculateBoundaries()
+    {
+        Camera cam = Camera.main;
+        float distance = transform.position.z - cam.transform.position.z;
+        Vector3 leftEdge = cam.ViewportToWorldPoint(new Vector3(0, 0, distance));
+        Vector3 rightEdge = cam.ViewportToWorldPoint(new Vector3(1, 0, distance));
+        float playerHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
+        minX = leftEdge.x + playerHalfWidth;
+        maxX = rightEdge.x - playerHalfWidth;
     }
 }

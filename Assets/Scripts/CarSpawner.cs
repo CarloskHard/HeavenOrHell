@@ -16,24 +16,19 @@ public class CarSpawner : MonoBehaviour
 
     void Spawn()
     {
-        // 1. Crear el coche
         GameObject car = Instantiate(carPrefab, transform.position, Quaternion.identity);
-
-        // 2. Configurar dirección y velocidad
         Car carScript = car.GetComponent<Car>();
 
-        if (moveRight)
+        if (carScript != null)
         {
+            // Elegir una skin aleatoria entre las disponibles en el script del coche
+            int randomSkin = Random.Range(0, carScript.skins.Length);
+
+            // Configurar dirección y apariencia
             carScript.speed = carSpeed;
-            car.transform.rotation = Quaternion.Euler(0, 0, 0); // Mira a la derecha
-        }
-        else
-        {
-            carScript.speed = carSpeed;
-            car.transform.rotation = Quaternion.Euler(0, 0, 180); // Mira a la izquierda
+            carScript.Initialize(moveRight, randomSkin);
         }
 
-        // 3. Programar el siguiente coche con un tiempo aleatorio
         Invoke("Spawn", Random.Range(minDelay, maxDelay));
     }
 
