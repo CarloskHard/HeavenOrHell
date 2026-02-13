@@ -142,7 +142,7 @@ TextureImporter:
         width: 171
         height: 97
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,152 +159,20 @@ TextureImporter:
       name: Cars_final_1
       rect:
         serializedVersion: 2
-        x: 202
-        y: 255
-        width: 171
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4dc9559635dc72300800000000000000
-      internalID: 227376064338697428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cars_final_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 98
-        width: 97
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 264db1fa0daa5f180800000000000000
-      internalID: -9082165260254981022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cars_final_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 103
-        width: 96
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4b7ffae60a876e90800000000000000
-      internalID: -7032500530798691507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cars_final_4
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 104
-        width: 90
-        height: 139
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a19a902bcb163dde0800000000000000
-      internalID: -1309595603565958886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cars_final_5
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 103
-        width: 94
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6bc08971ba284e90800000000000000
-      internalID: -7041331075657708693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cars_final_6
-      rect:
-        serializedVersion: 2
         x: 5
-        y: 2
-        width: 183
-        height: 92
+        y: 3
+        width: 184
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5a7145e86e1a56d0800000000000000
-      internalID: -3001052765817308577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cars_final_7
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 2
-        width: 183
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c468753a17decd700800000000000000
-      internalID: 566588725469349452
+      spriteID: c9e30cf483c05f841921bbbf2d2db3b4
+      internalID: 227376064338697428
       vertices: []
       indices: 
       edges: []
@@ -313,7 +181,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1e0c71bb666abfa4f805c73043c1b6e4
     internalID: 0
     vertices: []
     indices: 
