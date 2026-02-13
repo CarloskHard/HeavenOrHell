@@ -5,8 +5,11 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     private Vector2 moveInput;
-    private bool isDead = false; // El "interruptor" de vida
+    private bool isDead = false;
 
+    [Header("Límites de Movimiento")]
+    public float minY = -1f;
+    public float maxY = 1000f;
     private float minX, maxX;
 
     void Start()
@@ -27,14 +30,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Si estamos muertos, no hacemos nada en el Update
         if (isDead) return;
 
+        // 1. Movimiento
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0) * speed * Time.deltaTime;
         transform.Translate(movement);
 
+        // 2. Aplicar límites horizontales (Dinámicos)
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
-        transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+
+        // 3. Aplicar límites verticales (Manuales)
+        float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
+
+        // 4. Aplicar posición final
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
     void OnTriggerEnter2D(Collider2D other)

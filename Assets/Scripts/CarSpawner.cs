@@ -8,58 +8,69 @@ public class CarSpawner : MonoBehaviour
     public float carSpeed = 5f;
     public bool moveRight = true;
 
+    [Tooltip("Margen extra fuera de la pantalla para que el coche no aparezca de golpe")]
+    public float screenMargin = 1.5f;
+
+    private Camera cam;
+
     void Start()
     {
-        // Empezar el ciclo de generación
+        cam = Camera.main;
+        moveRight = (Random.value > 0.5f);
         Invoke("Spawn", Random.Range(minDelay, maxDelay));
     }
 
     void Spawn()
     {
-        GameObject car = Instantiate(carPrefab, transform.position, Quaternion.identity);
-        Car carScript = car.GetComponent<Car>();
+        // 1. Calculamos la posición X dinámica
+        float spawnX = CalculateSpawnX();
 
+        // 2. La posición Y es la del carril actual
+        Vector3 spawnPos = new Vector3(spawnX, transform.position.y, 0);
+
+        // 3. Crear el coche
+        GameObject car = Instantiate(carPrefab, spawnPos, Quaternion.identity);
+
+        Car carScript = car.GetComponent<Car>();
         if (carScript != null)
         {
-            // Elegir una skin aleatoria entre las disponibles en el script del coche
             int randomSkin = Random.Range(0, carScript.skins.Length);
-
-            // Configurar dirección y apariencia
             carScript.speed = carSpeed;
             carScript.Initialize(moveRight, randomSkin);
         }
 
+        // Repetir el ciclo
         Invoke("Spawn", Random.Range(minDelay, maxDelay));
     }
 
+    float CalculateSpawnX()
+    {
+        // Viewport: 0 es izquierda, 1 es derecha.
+        // Si va a la derecha (moveRight), nace a la izquierda (Viewport 0).
+        // Si va a la izquierda (!moveRight), nace a la derecha (Viewport 1).
+        float viewportX = moveRight ? 0 : 1;
 
-    // Esto SOLO se ejecuta dentro del Editor de Unity
+        // Convertimos ese punto 0 o 1 a coordenadas del mundo (X de Unity)
+        Vector3 edgePoint = cam.ViewportToWorldPoint(new Vector3(viewportX, 0, cam.nearClipPlane));
+
+        // Le aplicamos el margen para que aparezca un poco más afuera
+        if (moveRight)
+            return edgePoint.x - screenMargin; // Un poco a la izquierda del borde izq
+        else
+            return edgePoint.x + screenMargin; // Un poco a la derecha del borde der
+    }
+
+    // Actualizamos el Gizmo para que también sea dinámico en el Editor
     void OnDrawGizmos()
     {
-        // 1. Configurar dirección y distancia
-        // Usamos una distancia de 15 o la que tú quieras para que cubra la pantalla
-        float distance = 15f;
-        Vector3 direction = moveRight ? Vector3.right : Vector3.left;
-        Vector3 endPoint = transform.position + direction * distance;
+        if (cam == null) cam = Camera.main;
+        if (cam == null) return;
 
-        // 2. Dibujar la línea de trayectoria
-        // Verde si va a la derecha, Rojo si va a la izquierda
-        Gizmos.color = moveRight ? Color.green : Color.red;
-        Gizmos.DrawLine(transform.position, endPoint);
+        float spawnX = CalculateSpawnX();
+        Vector3 spawnPos = new Vector3(spawnX, transform.position.y, 0);
 
-        // 3. Dibujar una flecha al final de la línea para saber hacia dónde va
-        Gizmos.DrawSphere(endPoint, 0.2f);
-
-        // 4. Dibujar un "Coche" esquemático (Cuerpo + Cabina)
-        Gizmos.color = Color.yellow; // Color del Gizmo del coche
-
-        // Cuerpo del coche
-        Vector3 bodySize = new Vector3(1.2f, 0.6f, 0.1f);
-        Gizmos.DrawWireCube(transform.position, bodySize);
-
-        // Cabina (un cuadradito encima o delante para indicar el frente)
-        Vector3 cabinOffset = direction * 0.3f;
-        Vector3 cabinSize = new Vector3(0.4f, 0.4f, 0.1f);
-        Gizmos.DrawIcon(transform.position, "car_icon.png", true);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(spawnPos, new Vector3(0, transform.position.y, 0));
+        Gizmos.DrawWireCube(spawnPos, new Vector3(1.2f, 0.6f, 0.1f));
     }
 }

@@ -2,25 +2,29 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;        // Arrastrar aquí al Player
-    public float smoothSpeed = 0.125f; // Suavidad del movimiento
-    public Vector3 offset;          // Distancia de separación
+    public Transform target;
+    public float smoothSpeed = 0.125f;
+    public Vector3 offset;
 
-    void LateUpdate() // LateUpdate se usa para cámaras para evitar tirones
+    [Header("Límites Verticales")]
+    public float minY = 0f;      // La cámara no bajará de aquí
+    public float maxY = 1000f;   // La cámara no subirá de aquí (pon un número muy alto si es infinito)
+
+    void LateUpdate()
     {
         if (target != null)
         {
-            // Calculamos la posición deseada
-            // Mantenemos la X de la cámara (fija)
-            // Usamos la Y del jugador + el offset
-            // Mantenemos la Z de la cámara (-10)
-            Vector3 desiredPosition = new Vector3(transform.position.x, target.position.y + offset.y, transform.position.z);
+            // 1. Calculamos la posición deseada basada en el jugador
+            float desiredY = target.position.y + offset.y;
 
-            // Interpolación (movimiento suave) entre posición actual y deseada
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            // 2. Aplicamos el CLAMP para no pasarnos de los límites
+            float clampedY = Mathf.Clamp(desiredY, minY, maxY);
 
-            // Aplicamos la posición
-            transform.position = smoothedPosition;
+            // 3. Creamos el vector final (X fija, Y limitada, Z fija)
+            Vector3 desiredPosition = new Vector3(transform.position.x, clampedY, transform.position.z);
+
+            // 4. Suavizado
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         }
     }
 }
