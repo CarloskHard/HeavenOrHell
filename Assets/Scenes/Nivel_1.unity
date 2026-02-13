@@ -661,6 +661,7 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &1082675445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,6 +728,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb33163df0996944ab9bad5c1b250f4, type: 3}
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1258521928
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +821,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1369755558
 GameObject:
@@ -3963,7 +3969,11 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 719225237}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 1082675445}
+=======
+  - {fileID: 1258521930}
+>>>>>>> Stashed changes
 =======
   - {fileID: 1258521930}
 >>>>>>> Stashed changes
