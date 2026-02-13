@@ -39,8 +39,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Enviroment
+    uniqueID: 4146797495
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Objetos
+    uniqueID: 3467887467
+    locked: 0
+  - name: Player
+    uniqueID: 3025108267
     locked: 0
   m_RenderingLayers:
   - Default
