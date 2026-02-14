@@ -40,11 +40,13 @@ public class Car : MonoBehaviour
     {
         // Si la velocidad es 0 (porque el jugador nos paró), el coche no se moverá
         transform.Translate(Vector3.right * speed * Time.deltaTime);
+    }
 
-        // Solo se destruye si se está moviendo (opcional)
-        if (Mathf.Abs(speed) > 0 && Mathf.Abs(transform.position.x) > 15f)
-        {
-            Destroy(gameObject);
-        }
+    public void processHit()
+    {
+        speed = 0;
+        // Buscamos al padre (el Spawner)
+        CarSpawner spawner = GetComponentInParent<CarSpawner>();
+        spawner.StopLane(); // Esto detendrá la generación y todos los coches de esa línea
     }
 }
