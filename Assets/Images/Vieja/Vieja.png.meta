@@ -3,32 +3,35 @@ guid: 2b1ef6ff63e789540b0e805c6eef3922
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4312630483413563459
-    second: Vieja_0
+      213: 4770578140373772394
+    second: vieja_0
   - first:
-      213: -4910592216951311162
-    second: Vieja_1
+      213: 405445467193381296
+    second: vieja_1
   - first:
-      213: -5061699120464525889
-    second: Vieja_2
+      213: 149450011809625652
+    second: vieja_2
   - first:
-      213: 5763889329040766450
-    second: Vieja_3
+      213: 5521099437242702220
+    second: vieja_3
   - first:
-      213: 8953792794562281644
-    second: Vieja_4
+      213: -8232724566879436716
+    second: vieja_4
   - first:
-      213: -7596433653283997038
-    second: Vieja_5
+      213: 4248456825838168970
+    second: vieja_5
   - first:
-      213: 4558336753193950304
-    second: Vieja_6
+      213: 362287005172847519
+    second: vieja_6
   - first:
-      213: -3649498670784148479
-    second: Vieja_7
+      213: -3456967064291879573
+    second: vieja_7
   - first:
-      213: -9142013857278945771
-    second: Vieja_8
+      213: -6740940528468424907
+    second: vieja_8
+  - first:
+      213: 8753173073410334973
+    second: vieja_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vieja_0
+      name: vieja_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1016
-        width: 356
-        height: 414
+        x: 10
+        y: 839
+        width: 164
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 348f26b439a89db30800000000000000
-      internalID: 4312630483413563459
+      spriteID: a68e8360b8f743240800000000000000
+      internalID: 4770578140373772394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_1
+      name: vieja_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 679
-        width: 261
-        height: 340
+        x: 242
+        y: 833
+        width: 165
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c4b1d765621adbb0800000000000000
-      internalID: -4910592216951311162
+      spriteID: 0b19ad7118e60a500800000000000000
+      internalID: 405445467193381296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_2
+      name: vieja_2
       rect:
         serializedVersion: 2
-        x: 283
-        y: 679
-        width: 326
-        height: 340
+        x: 477
+        y: 833
+        width: 164
+        height: 273
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb50eccc77b31c9b0800000000000000
-      internalID: -5061699120464525889
+      spriteID: 43637917ef3f21200800000000000000
+      internalID: 149450011809625652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_3
+      name: vieja_3
       rect:
         serializedVersion: 2
-        x: 362
-        y: 1068
-        width: 252
-        height: 409
+        x: 0
+        y: 501
+        width: 164
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f5b32e6ec27dff40800000000000000
-      internalID: 5763889329040766450
+      spriteID: c89d576afa2ee9c40800000000000000
+      internalID: 5521099437242702220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_4
+      name: vieja_4
       rect:
         serializedVersion: 2
-        x: 595
-        y: 1016
-        width: 429
-        height: 462
+        x: 225
+        y: 501
+        width: 173
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca046508b13424c70800000000000000
-      internalID: 8953792794562281644
+      spriteID: 450058110ac7fbd80800000000000000
+      internalID: -8232724566879436716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_5
+      name: vieja_5
       rect:
         serializedVersion: 2
-        x: 670
-        y: 679
-        width: 288
-        height: 330
+        x: 459
+        y: 501
+        width: 171
+        height: 273
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29a3f2807db049690800000000000000
-      internalID: -7596433653283997038
+      spriteID: a8beaab49fc85fa30800000000000000
+      internalID: 4248456825838168970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_6
+      name: vieja_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 11
-        width: 348
-        height: 598
+        x: 38
+        y: 223
+        width: 281
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06c9bbc3027724f30800000000000000
-      internalID: 4558336753193950304
+      spriteID: f93511a9c1a170500800000000000000
+      internalID: 362287005172847519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_7
+      name: vieja_7
       rect:
         serializedVersion: 2
-        x: 346
-        y: 225
-        width: 287
-        height: 384
+        x: 326
+        y: 226
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10c86a77b406a5dc0800000000000000
-      internalID: -3649498670784148479
+      spriteID: b6558a455c26600d0800000000000000
+      internalID: -3456967064291879573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vieja_8
+      name: vieja_8
       rect:
         serializedVersion: 2
-        x: 370
-        y: 8
-        width: 654
-        height: 601
+        x: 0
+        y: 0
+        width: 295
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,8 +331,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 516903155da012180800000000000000
-      internalID: -9142013857278945771
+      spriteID: 5370b9ced4e5372a0800000000000000
+      internalID: -6740940528468424907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vieja_9
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1
+        width: 349
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df02322b884897970800000000000000
+      internalID: 8753173073410334973
       vertices: []
       indices: 
       edges: []
@@ -348,15 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vieja_0: 4312630483413563459
-      Vieja_1: -4910592216951311162
-      Vieja_2: -5061699120464525889
-      Vieja_3: 5763889329040766450
-      Vieja_4: 8953792794562281644
-      Vieja_5: -7596433653283997038
-      Vieja_6: 4558336753193950304
-      Vieja_7: -3649498670784148479
-      Vieja_8: -9142013857278945771
+      vieja_0: 4770578140373772394
+      vieja_1: 405445467193381296
+      vieja_2: 149450011809625652
+      vieja_3: 5521099437242702220
+      vieja_4: -8232724566879436716
+      vieja_5: 4248456825838168970
+      vieja_6: 362287005172847519
+      vieja_7: -3456967064291879573
+      vieja_8: -6740940528468424907
+      vieja_9: 8753173073410334973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
