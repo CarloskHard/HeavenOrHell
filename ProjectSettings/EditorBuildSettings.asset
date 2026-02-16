@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 0b10b49e266cd9446961e635327b289a
   - enabled: 1
-    path: Assets/Scenes/mg_CrossRoad.unity
+    path: Assets/Scenes/mg_1_CrossRoad.unity
     guid: f57e8e7406085a14099930be5431f455
+  - enabled: 1
+    path: Assets/Scenes/mg_2_.unity
+    guid: 05ec153a15d087e4aa36f38e24b24f7c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

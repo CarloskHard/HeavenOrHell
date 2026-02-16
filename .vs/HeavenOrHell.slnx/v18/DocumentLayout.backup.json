@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\touchzonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\touchzonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\finishtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\finishtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,37 +58,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TouchZoneController.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\TouchZoneController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TouchZoneController.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\TouchZoneController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TouchZoneController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "FinishTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T18:48:14.279Z",
+              "WhenOpened": "2026-02-16T13:02:49.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LevelLoader.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelLoader.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T12:46:47.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CarSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\CarSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\CarSpawner.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\CarSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\CarSpawner.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T01:37:53.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LevelGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T01:37:37.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T01:18:11.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\PlayerController.cs",
               "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\PlayerController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAwGcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T17:36:43.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MainMenuManager.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\MainMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuManager.cs",
@@ -84,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
@@ -96,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "LevelGenerator.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelGenerator.cs",
@@ -108,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CarSpawner.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\CarSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CarSpawner.cs",
@@ -119,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\Car.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Car.cs",
@@ -131,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",

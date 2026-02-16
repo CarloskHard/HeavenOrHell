@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
             float angle = car.speed > 0 ? 0 : 180;
             float yRotation = car.speed > 0 ? 90f : -90f;
             particles.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+            particles.transform.SetParent(transform);
         }
 
         float carSpeedAtImpact = car.speed;
@@ -125,7 +126,7 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(force, ForceMode2D.Impulse);
         rb.AddTorque(Random.Range(-spinForce, spinForce));
 
-        Debug.Log("¡Impacto detectado!");
+        Debug.Log("Impacto de atropello");
     }
 
     // El método Die original parece ser una versión alternativa del ProcessHit. 

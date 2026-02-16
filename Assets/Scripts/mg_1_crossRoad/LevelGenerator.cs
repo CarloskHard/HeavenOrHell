@@ -43,6 +43,7 @@ public class LevelGenerator : MonoBehaviour
     void SpawnLane(GameObject prefab)
     {
         GameObject lane = Instantiate(prefab, new Vector3(0, spawnY, 0), Quaternion.identity);
+        lane.transform.SetParent(transform);
         activeLanes.Add(lane);
         spawnY += laneHeight;
     }
