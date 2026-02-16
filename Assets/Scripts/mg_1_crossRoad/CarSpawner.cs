@@ -4,9 +4,9 @@ using UnityEngine;
 public class CarSpawner : MonoBehaviour
 {
     public GameObject carPrefab;
-    public float minDelay = 1.5f;
-    public float maxDelay = 3.5f;
-    public float carSpeed = 5f;
+    public float minDelay = 1f;
+    public float maxDelay = 2.5f;
+    public float carSpeed = 4f;
     public bool moveRight = true;
 
     [Tooltip("Margen extra fuera de la pantalla para que el coche no aparezca de golpe")]
