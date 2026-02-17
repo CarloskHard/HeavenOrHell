@@ -206,6 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183428905}
+  - component: {fileID: 183428906}
   m_Layer: 0
   m_Name: SpawnerMaletas
   m_TagString: Untagged
@@ -222,12 +223,29 @@ Transform:
   m_GameObject: {fileID: 183428904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.37323, y: -2.0204, z: 0}
+  m_LocalPosition: {x: 0, y: 1.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &183428906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183428904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d8588fb348cd74a950522d93b38dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SuitcaseSpawner
+  maletaPrefab: {fileID: 167893595624902764, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
+  handPlatform: {fileID: 1642721305}
+  distanciaSobreLaMasAlta: 4
+  rangoX: 0
+  tiempoEntreSpawns: 5
 --- !u!1 &243354411
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +258,7 @@ GameObject:
   - component: {fileID: 243354413}
   - component: {fileID: 243354412}
   - component: {fileID: 243354415}
+  - component: {fileID: 243354416}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -315,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 243354411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 3.14, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -365,6 +384,23 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &243354416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243354411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fbc544c4c6d4749a119a93585d53f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraControllerMg2
+  manosPivot: {fileID: 1642721305}
+  margenInferior: 2
+  margenSuperior: 0.94
+  tamanoMinimoSeguridad: 5
+  suavizado: 3
 --- !u!1 &1565323588
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565323589}
   - component: {fileID: 1565323590}
+  - component: {fileID: 1565323591}
   m_Layer: 0
   m_Name: PlayerPivot
   m_TagString: Untagged
@@ -391,7 +428,7 @@ Transform:
   m_GameObject: {fileID: 1565323588}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 5.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -412,6 +449,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerMg2
   velocidadRotacion: 100
   anguloMaximo: 45
+  factorSuavizado: 10
+  radioArco: 5.4
+  handPlatform: {fileID: 1642721305}
+  rb: {fileID: 0}
+--- !u!114 &1565323591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565323588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: b277a497d179756418690dfa7cf813e1, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1642721304
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,8 +511,8 @@ Transform:
   m_GameObject: {fileID: 1642721304}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 0.7512656, y: 0.275, z: 1}
+  m_LocalPosition: {x: 0, y: -5.4, z: 0}
+  m_LocalScale: {x: 1.3147148, y: 0.275, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1565323589}
@@ -508,7 +579,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: db91940de7dd59046902fdd8fc22b25a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -569,7 +640,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8113208, g: 0.63972193, b: 0.4477572, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -647,67 +718,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbbf5bf3281ed3843a57788b8a0e5a9c, type: 3}
---- !u!1001 &7292035988432613229
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 167893595624902764, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_Name
-      value: Maleta
-      objectReference: {fileID: 0}
-    - target: {fileID: 167893595624902764, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2209679557875091430, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c95a4ac06b9100a4f874a257096fa316, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -715,6 +725,5 @@ SceneRoots:
   - {fileID: 1719361518}
   - {fileID: 243354414}
   - {fileID: 1565323589}
-  - {fileID: 7292035988432613229}
   - {fileID: 183428905}
   - {fileID: 159822840}
