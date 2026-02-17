@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: road_markings_white_159
+  m_Name: Street_406
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: -907362875, guid: 20c50ba9bbe81ed4598cd13f71a226ee, type: 3}
+  m_Sprite: {fileID: 1665876015, guid: 41744d77cefc038499b48015ed00a6f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
