@@ -5,39 +5,43 @@ public class PlayerControllerMg2 : MonoBehaviour
 {
     [Header("Configuración de Movimiento")]
     public float velocidadRotacion = 150f;
-    public float anguloMaximo = 60f;
+    float anguloMaximoDiseño = 60f;
 
     [Range(1f, 20f)]
-    public float factorSuavizado = 10f; // Slider de suavizado (Más bajo = más lento/pesado)
+    public float factorSuavizado = 10f;
 
-    [Header("Configuración del Arco (Radio)")]
-    [Range(5f, 50f)]
-    public float radioArco = 3f; // Slider de la curva
+    [Header("Configuración del Arco")]
+    [Range(3f, 30f)]
+    public float radioArco = 3f;
+    float alturaFijaDeMano = 0f;
 
-    private float alturaFijaDeMano = 0f;
+    [Header("Límites de Pantalla")]
+    [Tooltip("Espacio que dejamos en los bordes para que la mano no se corte (aprox mitad del ancho de la mano)")]
+    [Range(0f, 1f)]
+    public float margenLateral = 1.0f;
 
     [Header("Referencias")]
-    public Transform handPlatform; // Arrastra el objeto hijo HandPlatform
-    public Rigidbody2D rb;         // Arrastra el Rigidbody (normalmente en HandPlatform o Pivot)
+    public Transform handPlatform;
 
     // Variables internas
     private float anguloObjetivo = 0f;
     private float anguloSuavizado = 0f;
+    private float anguloMaximoCalculado = 0f; // El límite real actual
     private Vector2 inputActual;
+    private Camera cam;
 
     void OnValidate()
     {
-        // Esto permite ver los cambios en el Editor sin dar Play
         ActualizarGeometriaBrazo();
     }
 
     void Start()
     {
-        // Inicializamos los ángulos
-        anguloObjetivo = transform.rotation.eulerAngles.z;
-        // Ajustamos los ángulos para que vayan de -180 a 180
-        if (anguloObjetivo > 180) anguloObjetivo -= 360;
+        cam = Camera.main; // Obtenemos la cámara para medir la pantalla
 
+        // Inicializar ángulos
+        anguloObjetivo = transform.rotation.eulerAngles.z;
+        if (anguloObjetivo > 180) anguloObjetivo -= 360;
         anguloSuavizado = anguloObjetivo;
 
         ActualizarGeometriaBrazo();
@@ -50,52 +54,78 @@ public class PlayerControllerMg2 : MonoBehaviour
 
     void Update()
     {
-        // Calculamos la geometría en Update para que si mueves el slider jugando, 
-        // se ajuste en tiempo real sin tirar las maletas.
+        // 1. Calcular el límite dinámico basado en la pantalla
+        CalcularLimitePantalla();
+
+        // 2. Actualizar geometría (por si cambias el radio en tiempo real)
         ActualizarGeometriaBrazo();
     }
 
     void FixedUpdate()
     {
-        // 1. Calcular el input
         float inputX = inputActual.x;
 
-        // 2. Acumular ángulo (CONTROLES INVERTIDOS: Usamos '+=' en vez de '-=')
-        // Antes: Derecha restaba ángulo. Ahora: Derecha suma ángulo.
+        // 3. Acumular ángulo
         anguloObjetivo += inputX * velocidadRotacion * Time.fixedDeltaTime;
 
-        // 3. Limitar (Clamp) el ángulo objetivo
-        anguloObjetivo = Mathf.Clamp(anguloObjetivo, -anguloMaximo, anguloMaximo);
+        // 4. CLAMP INTELIGENTE
+        // Usamos el MENOR valor entre: tu límite de diseño (ej. 60) Y el límite de pantalla calculado
+        float limiteFinal = Mathf.Min(anguloMaximoDiseño, anguloMaximoCalculado);
 
-        // 4. Suavizado (Interpolación Lineal)
-        // Lerp acerca el ángulo actual al objetivo basándose en el factor de suavizado
+        anguloObjetivo = Mathf.Clamp(anguloObjetivo, -limiteFinal, limiteFinal);
+
+        // 5. Suavizado
         anguloSuavizado = Mathf.Lerp(anguloSuavizado, anguloObjetivo, Time.fixedDeltaTime * factorSuavizado);
 
-        // 5. Aplicar la rotación física
-        if (rb != null)
-        {
-            rb.MoveRotation(anguloSuavizado);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 0, anguloSuavizado);
-        }
+        // 6. Aplicar rotación
+        transform.rotation = Quaternion.Euler(0, 0, anguloSuavizado);
     }
 
-    // Esta es la función mágica que ajusta Padre e Hijo a la vez
+    void CalcularLimitePantalla()
+    {
+        if (cam == null) return;
+
+        // A. Calculamos el ancho visible del mundo (Mitad del ancho total)
+        float alturaCamara = cam.orthographicSize;
+        float anchoPantallaMundo = alturaCamara * cam.aspect;
+
+        // B. Definimos el X máximo al que puede llegar el centro de la mano
+        float xMaximoPermitido = anchoPantallaMundo - margenLateral;
+
+        // C. Matemáticas: Despejamos el ángulo de la fórmula "X = Radio * Sin(Angulo)"
+        // Angulo = Asin(X / Radio)
+        // Clamp es necesario por si el radio es muy pequeño y X/Radio da > 1 (error matemático)
+        float ratio = Mathf.Clamp(xMaximoPermitido / radioArco, -1f, 1f);
+
+        // Convertimos de radianes a grados
+        anguloMaximoCalculado = Mathf.Asin(ratio) * Mathf.Rad2Deg;
+    }
+
     void ActualizarGeometriaBrazo()
     {
         if (handPlatform == null) return;
 
-        // A. Colocar el Pivote (Padre) más arriba según el radio crece
-        // La posición del padre será la altura deseada de la mano + el radio
-        // Mantenemos la X y Z originales del padre.
+        // Mover pivote y mano para mantener la mano a altura fija visualmente
         Vector3 nuevaPosPadre = transform.position;
         nuevaPosPadre.y = alturaFijaDeMano + radioArco;
         transform.position = nuevaPosPadre;
 
-        // B. Colocar la Mano (Hijo) más abajo en local
-        // Al ser posición local, es relativa al padre.
         handPlatform.localPosition = new Vector3(0, -radioArco, 0);
+    }
+
+    // Debug visual para ver hasta dónde permite llegar la pantalla
+    void OnDrawGizmos()
+    {
+        if (cam == null) cam = Camera.main;
+        if (cam == null) return;
+
+        // Dibujar líneas verticales donde está el límite de la pantalla (con margen)
+        float alto = cam.orthographicSize;
+        float ancho = alto * cam.aspect;
+        float limiteX = ancho - margenLateral;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(new Vector3(limiteX, -10, 0), new Vector3(limiteX, 10, 0));
+        Gizmos.DrawLine(new Vector3(-limiteX, -10, 0), new Vector3(-limiteX, 10, 0));
     }
 }

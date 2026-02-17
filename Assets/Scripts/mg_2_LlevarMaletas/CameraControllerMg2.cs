@@ -14,6 +14,7 @@ public class CameraControllerMg2 : MonoBehaviour
     public float suavizado = 3f; // Velocidad de la cámara (Lerp)
 
     private Camera cam;
+    private float alturaManos = 0f;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class CameraControllerMg2 : MonoBehaviour
     {
         // 1. Definir el Límite Inferior (EL SUELO VISUAL)
         // Queremos ver desde las manos hacia abajo un poco
-        float limiteInferior = manosPivot.position.y - margenInferior;
+        float limiteInferior = alturaManos - margenInferior;
 
         // 2. Definir el Límite Superior (EL TECHO VISUAL)
         float alturaMaxima = ObtenerAlturaMaletaMasAlta();

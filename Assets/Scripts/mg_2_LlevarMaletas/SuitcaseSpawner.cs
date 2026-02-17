@@ -10,6 +10,7 @@ public class SuitcaseSpawner : MonoBehaviour
     public float tiempoEntreSpawns = 3f;
 
     private float temporizador;
+    private float alturaMinSpawn;
 
     void Update()
     {
@@ -34,7 +35,8 @@ public class SuitcaseSpawner : MonoBehaviour
         // Usamos la X aleatoria y la Y calculada
         Vector3 spawnPos = new Vector3(randomX, alturaSpawn, 0);
 
-        Instantiate(maletaPrefab, spawnPos, Quaternion.identity);
+        // Instanciar la maleta y establecer este objeto como su padre
+        Instantiate(maletaPrefab, spawnPos, Quaternion.identity, transform);
     }
 
     float ObtenerAlturaObjetivo()
@@ -64,8 +66,8 @@ public class SuitcaseSpawner : MonoBehaviour
             }
         }
 
-        // Devolvemos la altura de la maleta más alta + la distancia deseada
-        return maxY + distanciaSobreLaMasAlta;
+        float alturaNextSpawn = Mathf.Max(0, maxY);
+        return alturaNextSpawn + distanciaSobreLaMasAlta;
     }
 
     // Dibujo visual en el editor para ver dónde aparecerá la próxima (aprox)

@@ -8,7 +8,7 @@ PhysicsMaterial2D:
   m_PrefabAsset: {fileID: 0}
   m_Name: GripMat
   serializedVersion: 2
-  friction: 124.72
+  friction: 1.46
   bounciness: 0
   m_FrictionCombine: 4
   m_BounceCombine: 4
