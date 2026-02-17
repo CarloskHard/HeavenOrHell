@@ -1,0 +1,39 @@
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerControllerMg2 : MonoBehaviour
+{
+    [Header("Configuración")]
+    public float velocidadRotacion = 100f;
+    public float anguloMaximo = 60f;
+    [Range(3f, 100f)]
+    public float suavizadoInput = 1f;
+
+    [Header("Referencias")]
+    // Opcional: Si quieres ver el input en el inspector para debug
+    [SerializeField] private Vector2 inputActual;
+        
+    private float anguloActual = 0f;
+    public float inputSuavizado;
+
+    // Esta función se llama automáticamente si el Player Input
+    // tiene el Behavior en "Send Messages" y tu acción se llama "Move"
+    public void OnMove(InputValue value)
+    {
+        inputActual = value.Get<Vector2>();
+    }
+
+    void Update()
+    {
+        // Suavizamos la entrada (usamos `suavizadoInput` para controlar la velocidad)
+        inputSuavizado = Mathf.Lerp(inputSuavizado, inputActual.x, Time.deltaTime * suavizadoInput);
+
+        anguloActual -= inputSuavizado * velocidadRotacion * Time.deltaTime;
+
+        // Limitar la rotación (Clamp)
+        anguloActual = Mathf.Clamp(anguloActual, -anguloMaximo, anguloMaximo);
+
+        // Aplicar rotación al pivote
+        transform.rotation = Quaternion.Euler(0, 0, anguloActual);
+    }
+}
