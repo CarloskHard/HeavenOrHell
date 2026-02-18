@@ -118,6 +118,8 @@ public class PlayerControllerMg1 : MonoBehaviour
             rb.linearDamping = deathLinearDamping;
             rb.angularDamping = deathAngularDamping;
             rb.freezeRotation = false;
+
+            LevelLoader.Instance.LoadNextLevelWithScore(-10);
         }
 
         Vector2 impactDir = new Vector2(carSpeedAtImpact, 0);

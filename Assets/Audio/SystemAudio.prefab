@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   canalMusica: {fileID: 11400000, guid: 2b06ef1df09c7544e88f672602ba3a95, type: 2}
   mixer: {fileID: 24100000, guid: b77c503d817ede743b5afb0d9c887148, type: 2}
-  volumenMusica: 0.1
+  volumenMaster: 1
+  volumenMusica: 0.054
   volumenSfx: 1

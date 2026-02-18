@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_2_llevarmaletas\\mg2manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_2_llevarmaletas\\mg2manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_2_llevarmaletas\\deathzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_2_llevarmaletas\\deathzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\scoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_2_llevarmaletas\\playercontrollermg2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_2_llevarmaletas\\playercontrollermg2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\menu\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\menu\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_2_llevarmaletas\\suitcasespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_2_llevarmaletas\\suitcasespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_2_llevarmaletas\\cameracontrollermg2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_2_llevarmaletas\\cameracontrollermg2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\playercontrollermg1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\playercontrollermg1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\finishtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\finishtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\menu\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,90 +43,93 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LevelLoader.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelLoader.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LevelLoader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T13:28:23.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DeathZone.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\DeathZone.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\DeathZone.cs",
               "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\DeathZone.cs",
               "RelativeToolTip": "Assets\\Scripts\\mg_2_LlevarMaletas\\DeathZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T13:21:22.889Z",
+              "WhenOpened": "2026-02-18T17:26:27.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerControllerMg1.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\PlayerControllerMg1.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\PlayerControllerMg1.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\PlayerControllerMg1.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\PlayerControllerMg1.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwHkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T17:06:26.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ScoreData.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\ScoreData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreData.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\ScoreData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScoreData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Title": "LevelGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T13:10:56.967Z",
+              "WhenOpened": "2026-02-18T17:02:30.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Mg2Manager.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\Mg2Manager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\Mg2Manager.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\Mg2Manager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\mg_2_LlevarMaletas\\Mg2Manager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "FinishTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:47:30.842Z",
+              "WhenOpened": "2026-02-18T16:22:57.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CameraControllerMg2.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\CameraControllerMg2.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\CameraControllerMg2.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\CameraControllerMg2.cs",
-              "RelativeToolTip": "Assets\\Scripts\\mg_2_LlevarMaletas\\CameraControllerMg2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Menu\\AudioManager.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Menu\\AudioManager.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAuwEMAAACNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T13:34:50.018Z"
+              "WhenOpened": "2026-02-18T15:46:21.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SuitcaseSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\SuitcaseSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\SuitcaseSpawner.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\SuitcaseSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\mg_2_LlevarMaletas\\SuitcaseSpawner.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowEUAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MainMenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\MainMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Menu\\MainMenuManager.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\MainMenuManager.cs",
+              "RelativeToolTip": "Assets\\Menu\\MainMenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T12:59:26.559Z"
+              "WhenOpened": "2026-02-18T15:04:54.027Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerControllerMg2.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\PlayerControllerMg2.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\PlayerControllerMg2.cs",
-              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\PlayerControllerMg2.cs",
-              "RelativeToolTip": "Assets\\Scripts\\mg_2_LlevarMaletas\\PlayerControllerMg2.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAcwAcAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LevelLoader.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelLoader.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelLoader.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAuwJIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T12:56:13.435Z"
+              "WhenOpened": "2026-02-18T13:28:23.834Z",
+              "EditorCaption": ""
             }
           ]
         }

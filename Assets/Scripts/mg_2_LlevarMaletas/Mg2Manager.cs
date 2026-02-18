@@ -5,33 +5,23 @@ using UnityEngine;
 public class Mg2Manager : MonoBehaviour
 {
     [Header("Dependencias")]
-    public LevelLoader levelLoader;
-    [SerializeField] private ScoreData scoreData;
     public TextMeshProUGUI textoTiempo;
 
-    [Header("Configuración de Nivel")]
-    [Tooltip("Puntuación mínima para poder pasar al siguiente nivel")]
-    public int minScore = -10;
-
-    [Tooltip("Puntuación máxima permitida (si te pasas, pierdes)")]
-    public int maxScore = 50;
-
+  
     [Header("Temporizador")]
     public int tiempoInicialSegundos = 10;
     public float retrasoInicioSegundos = 3f;
 
+    private int minScore = -10;
+    private int maxScore = 10;
+
     private int tiempoRestante;
     private Coroutine cuentaAtrasCoroutine;
 
+    private int levelScore = 10;
+
     private void Start()
     {
-        // Validación de seguridad
-        if (scoreData == null)
-        {
-            Debug.LogError("¡Falta asignar el ScoreData en el inspector!");
-            return;
-        }
-
         tiempoRestante = Mathf.Max(0, tiempoInicialSegundos);
         ActualizarUI(tiempoRestante);
 
@@ -42,21 +32,17 @@ public class Mg2Manager : MonoBehaviour
     // Nombramos los métodos en PascalCase por convención de C#
     private void FinishLevel()
     {
-        // Obtenemos la puntuación actual directamente del ScriptableObject
-        int currentScore = scoreData.currentScore;
-
         // Comprobamos condiciones de victoria/derrota
         // NOTA: Revisa si realmente quieres bloquear al jugador si supera el maxScore.
-        if (currentScore < minScore || currentScore > maxScore)
+        if (levelScore < minScore || levelScore > maxScore)
         {
-            Debug.Log($"Nivel fallido. Puntuación {currentScore} fuera del rango ({minScore}-{maxScore}).");
+            Debug.Log($"Nivel fallido. Puntuación {levelScore} fuera del rango ({minScore}-{maxScore}).");
             // Aquí podrías llamar a un "GameOver" o "RetryLevel"
         }
         else
         {
             Debug.Log("Nivel superado. Cargando siguiente escena...");
-            // NO sumamos la puntuación aquí, porque ya se sumó cuando ganaste los puntos.
-            levelLoader.LoadNextLevel();
+            LevelLoader.Instance.LoadNextLevelWithScore(levelScore);
         }
     }
 

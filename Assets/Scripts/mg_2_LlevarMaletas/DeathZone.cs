@@ -3,8 +3,6 @@ using UnityEngine;
 public class DeathZone : MonoBehaviour
 {
 
-    public LevelLoader levelLoader;
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Maleta"))
@@ -13,7 +11,7 @@ public class DeathZone : MonoBehaviour
             Destroy(other.gameObject);
 
             Debug.Log("¡Se cayó una maleta! Fin del juego.");
-            levelLoader.LoadNextLevel();
+            LevelLoader.Instance.LoadNextLevelWithScore(-5);
         }
     }
 }

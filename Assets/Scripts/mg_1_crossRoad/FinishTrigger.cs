@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FinishTrigger : MonoBehaviour
 {
-    public LevelLoader levelLoader;
+    int levelScore = 5;
 
     // Esta función se ejecuta automáticamente cuando algo entra en el Trigger
     void OnTriggerEnter2D(Collider2D other)
@@ -12,9 +12,9 @@ public class FinishTrigger : MonoBehaviour
         {
             Debug.Log("¡El jugador ha entrado en el área final!");
 
-            if (levelLoader != null)
+            if (LevelLoader.Instance != null)
             {
-                levelLoader.LoadNextLevel();
+                LevelLoader.Instance.LoadNextLevelWithScore(levelScore);
             }
         }
     }
