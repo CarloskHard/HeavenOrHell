@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Car
+  - Maleta
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - coches
+  - PhysicsObjects
   - Water
   - UI
   - Player
