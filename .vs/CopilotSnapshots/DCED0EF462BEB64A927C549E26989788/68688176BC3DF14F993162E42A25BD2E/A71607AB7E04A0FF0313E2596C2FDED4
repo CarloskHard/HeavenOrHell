@@ -1,0 +1,27 @@
+﻿using TMPro;
+using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
+
+public class Mg2Manager : MonoBehaviour
+{
+    public LevelLoader levelLoader;
+
+    [SerializeField] private ScoreData scoreData;
+    public TextMeshPro textoTiempo;
+
+    int minScore = -10;
+    int maxScore = 10;
+
+    void finishLevel(int score)
+    {
+        if (score > maxScore || score < minScore)
+        {
+            Debug.Log("ERROR: Puntuación fuera de rango. No se puede avanzar al siguiente nivel.");
+        }
+        else
+        {
+            scoreData.AddScore(score);
+            levelLoader.LoadNextLevel();
+        }
+    }
+}
