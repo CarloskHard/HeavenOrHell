@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement; // Necesario para cambiar escenas
 
 public class MainMenuManager : MonoBehaviour
 {
-    public LevelLoader levelLoader;
-
     // Referencia al mismo canal
     public AudioEventChannel canalMusica;
 
@@ -30,7 +28,7 @@ public class MainMenuManager : MonoBehaviour
             canalMusica.RaiseSfxEvent(sfx_btn);
         }
 
-        levelLoader.LoadNextLevel();
+        LevelLoader.Instance.LoadNextLevel();
     }
 
     public void SalirJuego()

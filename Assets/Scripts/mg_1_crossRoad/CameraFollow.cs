@@ -1,14 +1,21 @@
 using UnityEngine;
 
+// Asegura que este script esté en el mismo objeto que la cámara
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
+    public float minY = 0f;      // El borde inferior de la pantalla no pasará de aquí
+    public float maxY = 1000f;   // El borde superior de la pantalla no pasará de aquí
 
-    [Header("Límites Verticales")]
-    public float minY = 0f;      // La cámara no bajará de aquí
-    public float maxY = 1000f;   // La cámara no subirá de aquí (pon un número muy alto si es infinito)
+    private float camHalfHeight; // Guardará la mitad de la altura de la cámara
+
+    void Start()
+    {
+        // Calculamos la mitad del alto de la cámara (su tamaño ortográfico)
+        camHalfHeight = GetComponent<Camera>().orthographicSize;
+    }
 
     void LateUpdate()
     {
@@ -17,13 +24,24 @@ public class CameraFollow : MonoBehaviour
             // 1. Calculamos la posición deseada basada en el jugador
             float desiredY = target.position.y + offset.y;
 
-            // 2. Aplicamos el CLAMP para no pasarnos de los límites
-            float clampedY = Mathf.Clamp(desiredY, minY, maxY);
+            // 2. Calculamos los límites reales de la posición (Límite del mundo +/- tamaño de cámara)
+            float realMinY = minY + camHalfHeight;
+            float realMaxY = maxY - camHalfHeight;
 
-            // 3. Creamos el vector final (X fija, Y limitada, Z fija)
+            // (Opcional) Seguridad: Si tus límites son más pequeños que la propia pantalla, lo centramos
+            if (realMinY > realMaxY)
+            {
+                realMinY = (minY + maxY) / 2f;
+                realMaxY = realMinY;
+            }
+
+            // 3. Aplicamos el CLAMP con los límites corregidos
+            float clampedY = Mathf.Clamp(desiredY, realMinY, realMaxY);
+
+            // 4. Creamos el vector final (X fija, Y limitada, Z fija)
             Vector3 desiredPosition = new Vector3(transform.position.x, clampedY, transform.position.z);
 
-            // 4. Suavizado
+            // 5. Suavizado
             transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         }
     }

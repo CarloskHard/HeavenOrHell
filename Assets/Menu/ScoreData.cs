@@ -5,6 +5,11 @@ public class ScoreData : ScriptableObject
 {
     public int totalScore;
 
+    void Start()
+    {
+        ResetScore();
+    }
+
     // Reseteamos solo al empezar una partida nueva completa
     public void ResetScore()
     {

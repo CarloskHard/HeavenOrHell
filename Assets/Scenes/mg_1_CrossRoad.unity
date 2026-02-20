@@ -199,7 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6988a12a3987de24aab10aae5253e3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  levelLoader: {fileID: 856568081}
 --- !u!61 &438596261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -255,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 438596259}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45753, y: 12.98, z: 0}
+  m_LocalPosition: {x: 0.45753, y: 16.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -432,7 +431,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3019608, g: 0.2784314, b: 0.27058825, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -482,7 +481,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.33, z: -10}
+  m_LocalPosition: {x: 0, y: 4.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -503,8 +502,8 @@ MonoBehaviour:
   target: {fileID: 757752819}
   smoothSpeed: 0.125
   offset: {x: 0, y: 2, z: 0}
-  minY: 0
-  maxY: 1000
+  minY: -5
+  maxY: 17
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,17 +764,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &856568081 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7135273305624610796, guid: cbbf5bf3281ed3843a57788b8a0e5a9c, type: 3}
-  m_PrefabInstance: {fileID: 1194486550333938928}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d879e3c9ded69448a9d958213ca6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &948077251
 GameObject:
   m_ObjectHideFlags: 0
@@ -5479,6 +5467,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7442784928090020927, guid: cbbf5bf3281ed3843a57788b8a0e5a9c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442784928090020927, guid: cbbf5bf3281ed3843a57788b8a0e5a9c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017375953782226905, guid: cbbf5bf3281ed3843a57788b8a0e5a9c, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
