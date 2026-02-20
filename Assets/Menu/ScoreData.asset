@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb7a6c7bc69cd84b8d047f604254ce5, type: 3}
   m_Name: ScoreData
   m_EditorClassIdentifier: Assembly-CSharp::ScoreData
-  currentScore: 0
+  totalScore: 0

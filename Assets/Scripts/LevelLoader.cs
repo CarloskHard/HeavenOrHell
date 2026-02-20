@@ -27,6 +27,9 @@ public class LevelLoader : MonoBehaviour
     public AudioClip scoreUpClip;
     public AudioClip scoreDownClip;
 
+    // VARIABLE DE CONTROL AÑADIDA
+    private bool isTransitioning = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -39,9 +42,6 @@ public class LevelLoader : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // ... (El resto de métodos LoadNextLevel, ScoreSequence, etc. siguen igual) ...
-    // Solo copio los métodos que no cambian para dar contexto, pero el importante es el de abajo.
 
     private IEnumerator LoadLevelRoutine()
     {
@@ -56,8 +56,16 @@ public class LevelLoader : MonoBehaviour
         while (!operation.isDone) yield return null;
     }
 
+    // ---------------------------------------------------------
+    // MODIFICADO: Bloqueo si ya hay transición
+    // ---------------------------------------------------------
     public void LoadNextLevelWithScore(int scoreEarnedInLevel)
     {
+        // Si ya estamos transicionando, no hacemos nada
+        if (isTransitioning) return;
+
+        // Bloqueamos
+        isTransitioning = true;
         StartCoroutine(ScoreSequence(scoreEarnedInLevel));
     }
 
@@ -69,7 +77,6 @@ public class LevelLoader : MonoBehaviour
         int oldTotal = scoreData.totalScore;
         int newTotal = oldTotal + earnedScore;
 
-        // Aquí llamamos a la animación de números modificada
         yield return StartCoroutine(AnimateNumbers(oldTotal, newTotal));
         yield return new WaitForSeconds(1.5f);
 
@@ -81,10 +88,21 @@ public class LevelLoader : MonoBehaviour
 
         yield return new WaitForSeconds(scoreExitDuration);
         canvasScore.SetActive(false);
+
+        // DESBLOQUEAMOS al terminar toda la secuencia
+        isTransitioning = false;
     }
 
+    // ---------------------------------------------------------
+    // MODIFICADO: Bloqueo si ya hay transición
+    // ---------------------------------------------------------
     public void LoadNextLevel()
     {
+        // Si ya estamos transicionando, no hacemos nada
+        if (isTransitioning) return;
+
+        // Bloqueamos
+        isTransitioning = true;
         StartCoroutine(StandardSequence());
     }
 
@@ -95,6 +113,12 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         yield return StartCoroutine(LoadLevelRoutine());
         transitionAnimator.SetTrigger("End");
+
+        // Opcional: Esperar a que termine la animación de entrada (End) antes de desbloquear
+        // yield return new WaitForSeconds(transitionTime); 
+
+        // DESBLOQUEAMOS para permitir futuras cargas en el siguiente nivel
+        isTransitioning = false;
     }
 
     // ========================================================================
@@ -102,10 +126,10 @@ public class LevelLoader : MonoBehaviour
     // ========================================================================
     private IEnumerator AnimateNumbers(int start, int end)
     {
+        // Debug.Log($"Animando números de {start} a {end}");
         float timer = 0f;
         scoreText.text = $"Total: {start}";
 
-        // Guardamos el último valor mostrado para comparar
         int previousDisplay = start;
 
         while (timer < scoreCountDuration)
@@ -113,35 +137,26 @@ public class LevelLoader : MonoBehaviour
             timer += Time.deltaTime;
             float progress = timer / scoreCountDuration;
 
-            // Calculamos el valor actual
             int currentDisplay = (int)Mathf.Lerp(start, end, progress);
 
-            // Actualizamos el texto
             scoreText.text = $"Total: {currentDisplay}";
 
-            // LÓGICA DE SONIDO
-            // Si el número que mostramos es diferente al del frame anterior...
             if (currentDisplay != previousDisplay)
             {
-                // Verificamos si sube o baja para elegir el clip
                 if (currentDisplay > previousDisplay && scoreUpClip != null)
                 {
-                    // Usamos PlayOneShot para permitir superposición rápida si cuenta muy rápido
                     canalMusica.RaiseSfxEvent(scoreUpClip);
                 }
                 else if (currentDisplay < previousDisplay && scoreDownClip != null)
                 {
                     canalMusica.RaiseSfxEvent(scoreDownClip);
                 }
-
-                // Actualizamos el "anterior" para la siguiente vuelta
                 previousDisplay = currentDisplay;
             }
 
             yield return null;
         }
 
-        // Aseguramos que el valor final es exacto y suena una última vez si faltó
         scoreText.text = $"Total: {end}";
         if (previousDisplay != end)
         {
