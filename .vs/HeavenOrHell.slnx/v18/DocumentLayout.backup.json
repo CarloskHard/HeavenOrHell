@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\scripts\\mg_1_crossroad\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mg_1_crossroad\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\carlo\\unityprojects\\heavenorhell\\assets\\menu\\scoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\menu\\scoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,6 +67,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\CameraFollow.cs",
+              "ToolTip": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\mg_1_crossRoad\\CameraFollow.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T22:55:57.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ScoreData.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\ScoreData.cs",
               "RelativeDocumentMoniker": "Assets\\Menu\\ScoreData.cs",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AudioEventChannel.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\AudioEventChannel.cs",
               "RelativeDocumentMoniker": "Assets\\Menu\\AudioEventChannel.cs",
@@ -83,12 +100,11 @@
               "RelativeToolTip": "Assets\\Menu\\AudioEventChannel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T22:25:24.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T22:25:24.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "KarmaBarAnimator.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\End_Scene\\KarmaBarAnimator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\End_Scene\\KarmaBarAnimator.cs",
@@ -96,12 +112,11 @@
               "RelativeToolTip": "Assets\\Scripts\\End_Scene\\KarmaBarAnimator.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T22:18:56.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T22:18:56.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EndSceneManager.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\End_Scene\\EndSceneManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\End_Scene\\EndSceneManager.cs",
@@ -109,12 +124,11 @@
               "RelativeToolTip": "Assets\\Scripts\\End_Scene\\EndSceneManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T21:57:13.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T21:57:13.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LevelLoader.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\LevelLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Menu\\LevelLoader.cs",
@@ -122,12 +136,11 @@
               "RelativeToolTip": "Assets\\Menu\\LevelLoader.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAIwGAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T21:51:57.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T21:51:57.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Mg2Manager.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\Mg2Manager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\Mg2Manager.cs",
@@ -139,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "DeathZone.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_2_LlevarMaletas\\DeathZone.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\mg_2_LlevarMaletas\\DeathZone.cs",
@@ -151,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LevelGenerator.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\LevelGenerator.cs",
@@ -163,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FinishTrigger.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\mg_1_crossRoad\\FinishTrigger.cs",
@@ -175,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Menu\\AudioManager.cs",
@@ -187,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainMenuManager.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Menu\\MainMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Menu\\MainMenuManager.cs",
@@ -195,12 +208,11 @@
               "RelativeToolTip": "Assets\\Menu\\MainMenuManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T15:04:54.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-18T15:04:54.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LevelLoader.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\UnityProjects\\HeavenOrHell\\Assets\\Scripts\\LevelLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelLoader.cs",
