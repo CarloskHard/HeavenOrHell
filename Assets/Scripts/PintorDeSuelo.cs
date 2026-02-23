@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -8,8 +9,8 @@ public enum TipoCarril
     Vacio, // Un carril sin nada, solo asfalto
     LineaContinua,
     FlechaDerecha,
-    FlechaIzquierda
-    // Aquí podrías añadir más en el futuro: LineaDiscontinua, PasoDeCebra...
+    FlechaIzquierda,
+    Mediana
 }
 public class PintorDeSuelo : MonoBehaviour
 {
@@ -41,16 +42,102 @@ public class PintorDeSuelo : MonoBehaviour
         tileMediana = Resources.Load<TileBase>("Tiles/Mediana");
         tilePasoZebra = Resources.Load<TileBase>("Tiles/PasoZebra");
 
-        //PintarCarriles();
-        PintarCarrilIzq(0);
-        PintarMediana(1);
-        PintarCarrilIzq(3);
-        LineaContinua(4);
-        PintarCarrilDer(5);
-        LineaContinua(6);
-        PintarCarrilIzq(7);
-        PintarMediana(8);
+        // Generamos el plan lógico de la carretera.
+        List<TipoCarril> miPlan = GenerarPlanDeCarretera(distanciaARecorrer);
 
+        // 3. "CONSTRUIR": Le pasamos el plan a la función que dibuja.
+        DibujarCarreteraDesdePlan(miPlan);
+
+    }
+
+    // --- NUEVA FUNCIÓN: EL CEREBRO (PLANIFICADOR) ---
+    private List<TipoCarril> GenerarPlanDeCarretera(int alturaTotal)
+    {
+        List<TipoCarril> plan = new List<TipoCarril>();
+        TipoCarril ultimoCarril = TipoCarril.Vacio;
+        int alturaGenerada = 0;
+        int alturaDesdeUltimaMediana = 0;
+
+        // Función local para no repetir código al añadir carriles
+        void RegistrarCarril(TipoCarril carril)
+        {
+            plan.Add(carril);
+            ultimoCarril = carril;
+            int altura = ObtenerAlturaDeCarril(carril);
+            alturaGenerada += altura;
+
+            if (carril == TipoCarril.Mediana)
+                alturaDesdeUltimaMediana = 0;
+            else
+                alturaDesdeUltimaMediana += altura;
+        }
+
+        while (alturaGenerada < alturaTotal)
+        {
+            // Opciones: 0 = Derecha, 1 = Izquierda, 2 = Mediana (si está disponible)
+            bool puedeMediana = (alturaDesdeUltimaMediana >= 3 && alturaTotal - alturaGenerada >= 2);
+            int opciones = puedeMediana ? 3 : 2;
+            int seleccion = Random.Range(0, opciones);
+
+            TipoCarril elegido = seleccion == 0 ? TipoCarril.FlechaDerecha :
+                                 seleccion == 1 ? TipoCarril.FlechaIzquierda :
+                                                  TipoCarril.Mediana;
+
+            // Lógica de inyección obligatoria de línea continua
+            bool necesitaLineaContinua =
+                (ultimoCarril == TipoCarril.FlechaDerecha && elegido == TipoCarril.FlechaIzquierda) ||
+                (ultimoCarril == TipoCarril.FlechaIzquierda && elegido == TipoCarril.FlechaDerecha);
+
+            if (necesitaLineaContinua)
+            {
+                // Si no hay espacio para la línea y la flecha, terminamos la generación
+                if (alturaGenerada + 2 > alturaTotal) break;
+
+                RegistrarCarril(TipoCarril.LineaContinua);
+            }
+
+            RegistrarCarril(elegido);
+        }
+
+        return plan;
+    }
+
+
+    // --- NUEVA FUNCIÓN: AYUDANTE DE ALTURAS ---
+    private int ObtenerAlturaDeCarril(TipoCarril carril)
+    {
+        if (carril == TipoCarril.Mediana)
+        {
+            return 2;
+        }
+        return 1;
+    }
+
+    // --- NUEVA FUNCIÓN: EL OBRERO (DIBUJANTE) ---
+    private void DibujarCarreteraDesdePlan(List<TipoCarril> plan)
+    {
+        int alturaActual = 0;
+        foreach (TipoCarril carril in plan)
+        {
+            switch (carril)
+            {
+                case TipoCarril.LineaContinua:
+                    LineaContinua(alturaActual);
+                    break;
+                case TipoCarril.FlechaDerecha:
+                    PintarCarrilDer(alturaActual);
+                    break;
+                case TipoCarril.FlechaIzquierda:
+                    PintarCarrilIzq(alturaActual);
+                    break;
+                case TipoCarril.Mediana:
+                    PintarMediana(alturaActual);
+                    break;
+                case TipoCarril.Vacio:
+                    break;
+            }
+            alturaActual += ObtenerAlturaDeCarril(carril);
+        }
     }
 
 
