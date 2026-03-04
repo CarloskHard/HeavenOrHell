@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Car
   - Maleta
+  - Agarre
+  - gato
   layers:
   - Default
   - TransparentFX

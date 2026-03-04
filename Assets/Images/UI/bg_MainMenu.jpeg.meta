@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8ebb2cca9d4dc2e49971c7c45f088526
+guid: f9189c33e068bf8469f2bef2ce8262b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8349470208450299065
-    second: Generated Image February 14, 2026 - 1_02PM_0
+      213: 6251488582954928350
+    second: Generated Image February 24, 2026 - 3_08AM.jpg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Generated Image February 14, 2026 - 1_02PM_0
+      name: Generated Image February 24, 2026 - 3_08AM.jpg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 768
-        height: 1376
+        width: 848
+        height: 1264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b4036dcae64fd370800000000000000
-      internalID: 8349470208450299065
+      spriteID: ed840709ebfb1c650800000000000000
+      internalID: 6251488582954928350
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Generated Image February 14, 2026 - 1_02PM_0: 8349470208450299065
+      Generated Image February 24, 2026 - 3_08AM.jpg_0: 6251488582954928350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
