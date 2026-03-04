@@ -17,6 +17,22 @@ public class CarSpawner : MonoBehaviour
     private bool isBlocked = false;
     private List<Car> activeCars = new List<Car>(); // Lista para rastrear los coches de esta línea
 
+    // Constructor
+    public void Initialize(float height, float minDelay, float maxDelay, float carSpeed, bool moveRight)
+    {
+        // 1. Establecer altura 
+        Vector3 newPos = transform.position;
+        newPos.y = height;
+        transform.position = newPos;
+
+        // 2. Configurar parámetros
+        this.minDelay = minDelay;
+        this.maxDelay = maxDelay;
+        this.carSpeed = carSpeed;
+        this.moveRight = moveRight;
+    }
+
+
     void Start()
     {
         cam = Camera.main;

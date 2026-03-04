@@ -14,7 +14,6 @@ public enum TipoCarril
 }
 public class PintorDeSuelo : MonoBehaviour
 {
-
     [SerializeField] private Tilemap asfaltoTilemap;      // Para arrastrar nuestro Tilemap "Floor"
     [SerializeField] private Tilemap marcasDeSueloTilemap;      // Para arrastrar nuestro Tilemap "Floor"
     [SerializeField] private int anchoDeLaLinea = 10; // <-- Añadimos esta
@@ -251,27 +250,21 @@ public class PintorDeSuelo : MonoBehaviour
 
     }
 
-    public void CrearCarril(bool vaHaciaDerecha, float altura)
+    public void CrearCarril(bool moveRight, float height)
     {
-        vaHaciaDerecha = false;
         // 1. Creamos el objeto
-        GameObject nuevoSpawnerObj = new GameObject("CarSpawnerAltura_" + altura);
+        GameObject nuevoSpawnerObj = new GameObject("CarSpawner_"+height);
 
-        // 2. Lo colocamos en la altura correcta
-        nuevoSpawnerObj.transform.position = new Vector3(0, altura, 0);
-        nuevoSpawnerObj.transform.SetParent(this.transform);
+        // 2. Le añadimos el script
+        CarSpawner script = nuevoSpawnerObj.AddComponent<CarSpawner>();
 
-        // 3. Añadimos el script
-        CarSpawner spawnerScript = nuevoSpawnerObj.AddComponent<CarSpawner>();
+        float miDelay = 1f;
+        float maxDelay = 3f;
+        float carSpeed = 5f;
 
-        // 4. CONFIGURAMOS TODO: ¡Esta línea es la que hace que vayan a derecha o izquierda!
-        spawnerScript.moveRight = vaHaciaDerecha;
-
-        // Le pasamos el resto de datos
-        spawnerScript.minDelay = 1.5f;
-        spawnerScript.maxDelay = 3.0f;
-        spawnerScript.carSpeed = 5f;
-        spawnerScript.carPrefab = prefabDelCoche;
+        // 3. Le pasamos los datos al script
+        script.carPrefab = prefabDelCoche;
+        script.Initialize(height, miDelay, maxDelay, carSpeed, moveRight);
     }
 
 

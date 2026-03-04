@@ -15,6 +15,9 @@ public class Car : MonoBehaviour
     // El Spawner llamará a esto al crear el coche
     public void Initialize(bool moveRight, int skinIndex)
     {
+        // Ajustar produndida en base a la altura
+        sr.sortingOrder = Mathf.RoundToInt(transform.position.y * -100); // Cuanto más abajo, más adelante se dibuja
+
         // Aseguramos que sr no sea nulo antes de asignarle el sprite
         if (sr == null) sr = GetComponent<SpriteRenderer>();
 
