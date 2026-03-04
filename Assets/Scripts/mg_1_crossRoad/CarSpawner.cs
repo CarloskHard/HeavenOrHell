@@ -4,8 +4,8 @@ using UnityEngine;
 public class CarSpawner : MonoBehaviour
 {
     public GameObject carPrefab;
-    public float minDelay = 1f;
-    public float maxDelay = 2.5f;
+    public float minDelay = 0.5f;
+    public float maxDelay = 1.5f;
     public float carSpeed = 4f;
     public bool moveRight = true;
 
@@ -20,8 +20,17 @@ public class CarSpawner : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        moveRight = (Random.value > 0.5f);
+        //moveRight = (Random.value > 0.5f);
         Invoke("Spawn", Random.Range(minDelay, maxDelay));
+    }
+
+    void Update()
+    {
+        // Solo limpiamos si hay coches activos
+        if (activeCars.Count > 0)
+        {
+            CleanUpOutOfBoundsCars();
+        }
     }
 
     void Spawn()
@@ -84,15 +93,6 @@ public class CarSpawner : MonoBehaviour
             return edgePoint.x - screenMargin; // Un poco a la izquierda del borde izq
         else
             return edgePoint.x + screenMargin; // Un poco a la derecha del borde der
-    }
-
-    void Update()
-    {
-        // Solo limpiamos si hay coches activos
-        if (activeCars.Count > 0)
-        {
-            CleanUpOutOfBoundsCars();
-        }
     }
 
     void CleanUpOutOfBoundsCars()
