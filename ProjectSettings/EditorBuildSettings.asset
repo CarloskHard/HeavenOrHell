@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/mg_2_.unity
     guid: 05ec153a15d087e4aa36f38e24b24f7c
   - enabled: 1
+    path: Assets/Scenes/mg_3_rescue_kitten.unity
+    guid: 3619cc4f260497a43bb61f594b9e72f4
+  - enabled: 1
     path: Assets/Scenes/End_Scene.unity
     guid: 19fcc9b257c115f499389afe8556d260
   m_configObjects:

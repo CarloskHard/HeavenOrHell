@@ -26,7 +26,6 @@ public class gm_3_manager : MonoBehaviour
         {
             alturaMaximaAlcanzada = player.position.y;
             sueloActualInfranqueable = alturaMaximaAlcanzada - bufferCamara;
-            cameraScript.minY = sueloActualInfranqueable;
         }
     }
 
@@ -75,7 +74,8 @@ public class gm_3_manager : MonoBehaviour
     {
         haMuerto = true;
         Debug.Log("Game Over");
-        Invoke("ReiniciarNivel", 1.5f);
+        //Invoke("ReiniciarNivel", 1.5f);
+        LevelLoader.Instance.LoadNextLevelWithScore(-10);
     }
 
     void ReiniciarNivel()
